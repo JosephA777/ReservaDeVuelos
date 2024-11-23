@@ -4,13 +4,10 @@ public class ReservaDeVuelos {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
-        // Variables
         String nombre, apellido, cedula, d, m, a;
         int boleto, Nmaleta, P1maleta, P2maleta, Tmaleta, eleccion, asientos = 0;
         double Pboleto = 0, Fprecio;
 
-        // Entrada de datos del usuario
         System.out.println("Ingrese su primer Nombre y su primer Apellido:");
         System.out.print("Primer Nombre: ");
         nombre = input.nextLine();
@@ -25,11 +22,9 @@ public class ReservaDeVuelos {
         m = input.nextLine();
         System.out.print("Año: ");
         a = input.nextLine();
-
         System.out.println("Señor " + nombre + " " + apellido + " con cédula " + cedula + 
                            " y fecha de nacimiento " + d + "/" + m + "/" + a);
 
-        // Selección de tipo de boleto
         do {
             System.out.println("Qué tipo de boleto desea?");
             System.out.println("1. Primera clase ($900)");
@@ -70,7 +65,6 @@ public class ReservaDeVuelos {
             }
         } while (boleto < 1 || boleto > 3);
 
-        // Manejo de equipaje
         do {
             System.out.println("Ingrese la cantidad de maletas que lleva (máximo 2): ");
             Nmaleta = input.nextInt();
@@ -109,7 +103,6 @@ public class ReservaDeVuelos {
             }
         } while (Nmaleta > 2 || Nmaleta < 0);
 
-        // Cancelación del boleto
         do {
             System.out.println("¿Desea hacer alguna cancelación? (Si=1 / No=0): ");
             eleccion = input.nextInt();
